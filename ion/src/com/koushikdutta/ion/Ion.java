@@ -315,8 +315,8 @@ public class Ion {
      * @param key
      * @return
      */
-    public DiskLruCacheStore cache() {
-        return new DiskLruCacheStore(this, responseCache.getDiskLruCache());
+    public DiskLruCacheStore cache(String key) {
+        return new DiskLruCacheStore(this, responseCache.getDiskLruCache(), key);
     }
 
     /**
@@ -324,8 +324,8 @@ public class Ion {
      * @param key
      * @return
      */
-    public DiskLruCacheStore store() {
-        return new DiskLruCacheStore(this, responseCache.getDiskLruCache());
+    public DiskLruCacheStore store(String key) {
+        return new DiskLruCacheStore(this, responseCache.getDiskLruCache(), key);
     }
 
     public String getName() {
